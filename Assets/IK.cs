@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Implementing the FABRIK algorithm
+// TODO1: Attach this script to the end bone of the arm you want to apply IK on. 
+// TODO2: Change number of bones to how many bones there are in your arm
+
 public class IK : MonoBehaviour
 {
     public int numberOfBones = 2; // How many bones do we want to do IK on
@@ -21,6 +25,11 @@ public class IK : MonoBehaviour
         bonesLengths = new float[numberOfBones - 1];
         bonesPositions = new Vector3[numberOfBones];
 
+        if (target == null)
+        {
+            target = new GameObject(gameObject.name + "_Target").transform;
+        }
+
         // Initialize bones array
         Transform currentBone = transform;
         for (int i = numberOfBones - 1; i >= 0; i--)
@@ -35,8 +44,6 @@ public class IK : MonoBehaviour
             bonesLengths[i] = Vector3.Distance(bones[i].position, bones[i+1].position);
             totalBonesLengths += bonesLengths[i];
         }
-
-        baseBonePosition = bones[0].position;
     }
 
     void LateUpdate()
@@ -58,11 +65,11 @@ public class IK : MonoBehaviour
             bonesPositions[i] = bones[i].position;
         }
 
+        baseBonePosition = bonesPositions[0];
+
         // If target is outside of the arm's reach, simply stretch the arm fully
         if ((target.position - baseBonePosition).sqrMagnitude > totalBonesLengths * totalBonesLengths)
         {
-            Debug.Log("Outside arm's reach");
-
             Vector3 dir = (target.position - baseBonePosition).normalized;
             for (int i = 1; i < numberOfBones; i++)
             {
@@ -73,8 +80,6 @@ public class IK : MonoBehaviour
         // If target is within arm's reach, do the FABRIK algorithm
         else
         {
-            Debug.Log("Within arm's reach");
-
             for (int iteration = 0; iteration < numberOfIterations; iteration++)
             {
                 // If the end bone is close enough to the target, stop iterating
@@ -107,7 +112,7 @@ public class IK : MonoBehaviour
             // Update rotations
             if (i == numberOfBones-1)
             {
-                Debug.Log("Rotate end bone");
+                // Debug.Log("Rotate end bone");
                 // bones[i].rotation = Quaternion.FromToRotation(initTargetForward, target.forward) * bones[i].rotation;
             }
             else
