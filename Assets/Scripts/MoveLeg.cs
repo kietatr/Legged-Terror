@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTo : MonoBehaviour
+public class MoveLeg : MonoBehaviour
 {
     public Transform target;
     public float maxDistanceToTarget = 2f;
