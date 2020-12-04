@@ -133,7 +133,7 @@ public class IK : MonoBehaviour
         for (int i = 0; i < numberOfBones; i++)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(currentBone.position, 1f);
+            Gizmos.DrawWireSphere(currentBone.position, 0.3f);
             currentBone = currentBone.parent;
         }
     }
