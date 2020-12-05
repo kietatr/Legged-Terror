@@ -29,13 +29,13 @@ public class MoveLeg : MonoBehaviour
                 StopCoroutine(currentMoveCoroutine);
             }
 
-            currentMoveCoroutine = MoveToTarget(currentDestination);
+            currentMoveCoroutine = MoveLegToTarget(currentDestination);
             
             StartCoroutine(currentMoveCoroutine);
         }
     }
 
-    IEnumerator MoveToTarget(Vector3 destination)
+    IEnumerator MoveLegToTarget(Vector3 destination)
     {
         while(transform.position != destination)
         {
