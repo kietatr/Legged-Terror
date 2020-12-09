@@ -10,8 +10,12 @@ public class LevelGen : MonoBehaviour {
 	[SerializeField]
 	private GameObject tilePrefab;
 
-	// public void GenerateLevel()
-	void Start() 
+	void Start()
+	{
+		GenerateLevel();
+	}
+
+	public void GenerateLevel() 
 	{
 		if (tilePrefab.name.Contains("(Clone)")) return;
 		Vector3 size = tilePrefab.GetComponent<MeshRenderer> ().bounds.size;

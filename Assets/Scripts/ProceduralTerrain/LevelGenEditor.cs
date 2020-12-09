@@ -9,7 +9,7 @@ public class LevelGenEditor : Editor
     override public void  OnInspectorGUI () {
         LevelGen LevelGen = (LevelGen) target;
         if (GUILayout.Button("Generate Level")) {
-            // LevelGen.GenerateLevel();
+            LevelGen.GenerateLevel();
         }
 
         if (GUI.changed) {

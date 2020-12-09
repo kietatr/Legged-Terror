@@ -8,7 +8,7 @@ using UnityEngine;
 
 // Referenced from: https://www.youtube.com/watch?v=qqOAzn05fvk
 
-[ExecuteInEditMode]
+// [ExecuteInEditMode]
 public class IK : MonoBehaviour
 {
     public int numberOfBones = 2; // How many bones do we want to do IK on
