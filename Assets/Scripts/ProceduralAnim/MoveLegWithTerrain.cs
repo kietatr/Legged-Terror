@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveWithTerrain : MonoBehaviour
+public class MoveLegWithTerrain : MonoBehaviour
 {
     public LayerMask groundLayer;
 

@@ -4,9 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class TerrainType {
- public string name;
- public float height;
- public Color color;
+    public string name;
+    public float height;
+    public Color color;
 }
 
 public class TileGen : MonoBehaviour
@@ -29,14 +29,24 @@ public class TileGen : MonoBehaviour
     private MeshCollider meshCollider;
     [SerializeField]
     private float scale;
-    // Start is called before the first frame update
-    void Start() {
+    
+    void Init() {
+        makeNoiseMapping = GetComponent<MakeNoiseMapping>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshFilter = GetComponent<MeshFilter>();
+        meshCollider = GetComponent<MeshCollider>();
+    }
+
+    public void GenerateTile() {
+        Init();
+
         int depth = (int)Mathf.Sqrt(this.meshFilter.mesh.vertices.Length);
         int width = depth;
         float x = -this.gameObject.transform.position.x;
         float z = -this.gameObject.transform.position.z;
-        float[,] map = this.makeNoiseMapping.GenNoiseMap(depth, width, scale,x,z);
+        float[,] map = this.makeNoiseMapping.GenNoiseMap(depth, width, scale, x, z);
         this.meshRenderer.material.mainTexture = BuildTexture(map);
+
         UpdateVertices(map);
     }
 
