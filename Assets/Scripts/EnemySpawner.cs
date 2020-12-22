@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
         int numEnemies = GetComponentsInChildren<Enemy>().Length;
         if (numEnemies < maxNumEnemiesInScene)
         {
-            int randomIndex = Random.Range(0, enemyPrefabs.Length - 1);
+            int randomIndex = Random.Range(0, enemyPrefabs.Length);
             Vector3 randomPos = new Vector3(Random.Range(30f, 150f), 0, Random.Range(30f, 150f)); 
             GameObject randomEnemy = Instantiate(enemyPrefabs[randomIndex], transform);
             randomEnemy.transform.position = randomPos;
