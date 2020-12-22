@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = jumpSpeed;
         }
-        print(velocity.y + " isGrounded = " + isGrounded);
 
         // Gravity
         velocity.y -= gravity * Time.deltaTime;
