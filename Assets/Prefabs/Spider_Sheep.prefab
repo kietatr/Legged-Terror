@@ -538,7 +538,6 @@ GameObject:
   - component: {fileID: 5923206694128479854}
   - component: {fileID: 5923206694128479842}
   - component: {fileID: 5923206694128479853}
-  - component: {fileID: 5923206694128479852}
   - component: {fileID: 5923206694128479855}
   m_Layer: 0
   m_Name: SpiderBody
@@ -603,21 +602,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5923206694128479852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5923206694128479849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1447b47b5ed6a984190945752a520d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 0.5
-  rotationAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &5923206694128479855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,7 +619,7 @@ MonoBehaviour:
   - {fileID: 5389692890331639483}
   - {fileID: 5389692889864980728}
   - {fileID: 5389692890080574400}
-  heightOffGround: 5
+  heightOffGround: 5.5
 --- !u!114 &5389692891242824688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,15 +1500,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8be005d29c4dec47a43b375105c4be8, type: 3}
---- !u!1 &8745779623444894669 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5506977543257564031, guid: d8be005d29c4dec47a43b375105c4be8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5389692891383467852}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5568331904947677351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d8be005d29c4dec47a43b375105c4be8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5389692891383467852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8745779623444894669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5506977543257564031, guid: d8be005d29c4dec47a43b375105c4be8,
     type: 3}
   m_PrefabInstance: {fileID: 5389692891383467852}
   m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3065907010052370910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810169099386156385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfBones: 4
+  target: {fileID: 3065907010203872202}
+  pole: {fileID: 3065907011524994104}
+  numberOfIterations: 10
+  epsilon: 0.1
+--- !u!114 &3065907011507844467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810169099959326396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfBones: 4
+  target: {fileID: 3065907009955018583}
+  pole: {fileID: 3065907010432286296}
+  numberOfIterations: 10
+  epsilon: 0.1
+--- !u!114 &3065907011761283734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810169100055322878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfBones: 4
+  target: {fileID: 3065907011886992777}
+  pole: {fileID: 3065907010175509614}
+  numberOfIterations: 10
+  epsilon: 0.1
+--- !u!114 &3065907010576090753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810169100757910451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfBones: 4
+  target: {fileID: 3065907011528818353}
+  pole: {fileID: 3065907011756049621}
+  numberOfIterations: 10
+  epsilon: 0.1
 --- !u!1 &3065907009955018580
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +114,7 @@ MonoBehaviour:
   target: {fileID: 3065907011400537529}
   maxDistanceToTarget: 3
   speed: 10
-  legRaiseAmount: 5
+  legRaiseAmount: 6
 --- !u!1 &3065907010175509615
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +191,7 @@ MonoBehaviour:
   target: {fileID: 3065907010259482104}
   maxDistanceToTarget: 3
   speed: 10
-  legRaiseAmount: 5
+  legRaiseAmount: 6
 --- !u!1 &3065907010259482105
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +471,7 @@ MonoBehaviour:
   target: {fileID: 3065907011696759822}
   maxDistanceToTarget: 3
   speed: 10
-  legRaiseAmount: 5
+  legRaiseAmount: 6
 --- !u!1 &3065907011696759823
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +594,7 @@ MonoBehaviour:
   target: {fileID: 3065907010455667739}
   maxDistanceToTarget: 3
   speed: 10
-  legRaiseAmount: 5
+  legRaiseAmount: 6
 --- !u!1 &3635308789239966488
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3635308789239966495}
   - component: {fileID: 3635308789239966492}
-  - component: {fileID: 3635308789239966493}
   - component: {fileID: 3635308789239966494}
   - component: {fileID: 3635308789239966483}
   m_Layer: 0
@@ -590,21 +657,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3635308789239966493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635308789239966488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1447b47b5ed6a984190945752a520d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 0.5
-  rotationAngles: {x: 0, y: 0, z: 0}
 --- !u!114 &3635308789239966494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,74 +688,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.56
   m_Center: {x: 0, y: 1.39, z: 0.37}
---- !u!114 &3065907011761283734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810169100055322878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfBones: 4
-  target: {fileID: 3065907011886992777}
-  pole: {fileID: 3065907010175509614}
-  numberOfIterations: 10
-  epsilon: 0.1
---- !u!114 &3065907011507844467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810169099959326396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfBones: 4
-  target: {fileID: 3065907009955018583}
-  pole: {fileID: 3065907010432286296}
-  numberOfIterations: 10
-  epsilon: 0.1
---- !u!114 &3065907010576090753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810169100757910451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfBones: 4
-  target: {fileID: 3065907011528818353}
-  pole: {fileID: 3065907011756049621}
-  numberOfIterations: 10
-  epsilon: 0.1
---- !u!114 &3065907010052370910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810169099386156385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b620283ff85abd644977cfa98d507ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfBones: 4
-  target: {fileID: 3065907010203872202}
-  pole: {fileID: 3065907011524994104}
-  numberOfIterations: 10
-  epsilon: 0.1
 --- !u!1001 &3065907010116037088
 PrefabInstance:
   m_ObjectHideFlags: 0
